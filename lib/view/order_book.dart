@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nft2_trader_front_end/model/golf_field.dart';
-import 'package:nft2_trader_front_end/view/joints.dart';
 import 'package:nft2_trader_front_end/view/trade_modal.dart';
+import 'package:nft2_trader_front_end/util/design_kit.dart';
 
 class OrderBook extends StatelessWidget {
   const OrderBook({super.key, required this.fieldData});

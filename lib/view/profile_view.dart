@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nft2_trader_front_end/model/app_state.dart';
 import 'package:nft2_trader_front_end/model/membership.dart';
-import 'package:nft2_trader_front_end/util.dart';
-import 'package:nft2_trader_front_end/view/joints.dart';
+import 'package:nft2_trader_front_end/util/util.dart';
+import 'package:nft2_trader_front_end/util/design_kit.dart';
 import 'package:provider/provider.dart';
 
 class ProfileView extends StatelessWidget {
