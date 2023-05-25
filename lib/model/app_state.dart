@@ -20,9 +20,15 @@ class AppState extends ChangeNotifier {
   final List<GolfField> golfFieldList = [
     GolfField(
       name: '유성CC',
-      priceList: ["3000", "3500"],
+      tradeHistory: [3000, 3500],
+      fee: 55,
       spec: "우리 골프장 킹왕짱 좋아요 많이 놀러오세요 @@@@@@@@@@",
     ),
-    GolfField(name: '한화리조트', priceList: ["14300", "13700"]),
+    GolfField(
+      name: '한화리조트',
+      tradeHistory: [14300, 13700],
+      fee: 22,
+      spec: "????",
+    ),
   ];
 }

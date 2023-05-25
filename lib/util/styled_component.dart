@@ -100,6 +100,25 @@ class BoldText20 extends StatelessWidget {
   }
 }
 
+class BoldText24 extends StatelessWidget {
+  const BoldText24(this.data, {super.key, this.textColor});
+
+  final String data;
+  final Color? textColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      data,
+      style: TextStyle(
+        fontSize: DesignKit.getFontSize(context, 24),
+        fontWeight: FontWeight.bold,
+        color: textColor ?? Colors.black,
+      ),
+    );
+  }
+}
+
 class PlainText10 extends StatelessWidget {
   const PlainText10(this.data, {super.key, this.textColor});
 
@@ -174,9 +193,13 @@ class SwingElevatedButton extends StatelessWidget {
         ),
         backgroundColor: DesignKit.lightGreen,
         shape: RoundedRectangleBorder(
-            side: const BorderSide(color: DesignKit.tonalGreen),
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(DesignKit.getWidth(context, 10)))),
+          side: const BorderSide(color: DesignKit.tonalGreen),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(
+              DesignKit.getWidth(context, 10),
+            ),
+          ),
+        ),
       ),
       onPressed: onPressed,
       child: text != null

@@ -45,8 +45,9 @@ class OrderBook extends StatelessWidget {
                     builder: (BuildContext context) {
                       return SellModal(
                         fieldName: fieldData.name,
-                        price:
-                            fieldData.priceList[fieldData.priceList.length - 1],
+                        price: fieldData
+                            .tradeHistory[fieldData.tradeHistory.length - 1]
+                            .toString(),
                       );
                     },
                   );
@@ -60,8 +61,9 @@ class OrderBook extends StatelessWidget {
                     builder: (BuildContext context) {
                       return BuyModal(
                         fieldName: fieldData.name,
-                        price:
-                            fieldData.priceList[fieldData.priceList.length - 1],
+                        price: fieldData
+                            .tradeHistory[fieldData.tradeHistory.length - 1]
+                            .toString(),
                       );
                     },
                   );

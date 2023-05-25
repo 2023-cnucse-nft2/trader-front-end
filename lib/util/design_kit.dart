@@ -5,12 +5,14 @@ class DesignKit {
   static const Color deepGreen = Color.fromARGB(255, 3, 81, 40);
   static const Color featherDirtGreen = Color.fromARGB(255, 180, 188, 184);
   static const Color lightDirtGreen = Color.fromARGB(255, 97, 109, 103);
+  static const Color lightDirtGreen70 = Color.fromARGB(179, 97, 109, 103);
   static const Color dirtGreen = Color.fromARGB(255, 29, 34, 31);
   static const Color heavyDirtGreen = Color.fromARGB(255, 29, 34, 31);
   static const Color featherGreen = Color.fromARGB(255, 245, 255, 250);
   static const Color lightGreen = Color.fromARGB(255, 240, 255, 247);
   static const Color tonalGreen = Color.fromARGB(255, 215, 248, 230);
   static const Color red = Color.fromARGB(255, 168, 32, 34);
+  static const Color blue = Color.fromARGB(255, 16, 26, 121);
   // static const Color yellow = Color.fromARGB(255, 255, 215, 0);
   // static const Color gray = Color.fromARGB(255, 188, 188, 188);
 
