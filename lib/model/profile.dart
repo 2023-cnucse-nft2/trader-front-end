@@ -4,7 +4,7 @@ class Profile {
   String name;
   String publicAddress;
   String? balance = "0";
-  List<MemberShip>? memberships = [];
+  List<Membership>? memberships = [];
 
   Profile({
     required this.name,

@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:nft2_trader_front_end/util/design_kit.dart';
 
+class Bulkhead extends StatelessWidget {
+  const Bulkhead({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: DesignKit.getHeight(context, 5),
+      margin: EdgeInsets.symmetric(vertical: DesignKit.getHeight(context, 10)),
+      color: DesignKit.featherDirtGreen,
+    );
+  }
+}
+
 class BoldText12 extends StatelessWidget {
   const BoldText12(this.data, {super.key, this.textColor, this.textAlign});
 
@@ -174,13 +187,15 @@ class PlainText14 extends StatelessWidget {
 }
 
 class SwingElevatedButton extends StatelessWidget {
-  Function()? onPressed;
-  String? text;
+  final Function()? onPressed;
+  final String? text;
+  final double? width;
 
-  SwingElevatedButton({
+  const SwingElevatedButton({
     super.key,
     this.onPressed,
     this.text,
+    this.width,
   });
 
   @override
@@ -188,7 +203,7 @@ class SwingElevatedButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         fixedSize: Size(
-          DesignKit.getWidth(context, 340),
+          DesignKit.getWidth(context, width ?? 340),
           DesignKit.getHeight(context, 45),
         ),
         backgroundColor: DesignKit.lightGreen,
@@ -208,6 +223,29 @@ class SwingElevatedButton extends StatelessWidget {
               textColor: DesignKit.deepGreen,
             )
           : null,
+    );
+  }
+}
+
+class SectionBox extends StatelessWidget {
+  Widget child;
+
+  SectionBox({super.key, required this.child});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        vertical: DesignKit.getHeight(context, 25),
+        horizontal: DesignKit.getWidth(context, 25),
+      ),
+      child: Column(
+        children: [
+          BoldText18('프로필'),
+          Bulkhead(),
+          child,
+        ],
+      ),
     );
   }
 }

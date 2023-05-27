@@ -1,6 +1,6 @@
 import 'package:dotted_decoration/dotted_decoration.dart';
 import 'package:flutter/material.dart';
-import 'package:nft2_trader_front_end/intent/login_logic.dart';
+import 'package:nft2_trader_front_end/intent/login_intents.dart';
 import 'package:nft2_trader_front_end/model/app_state.dart';
 import 'package:nft2_trader_front_end/model/profile.dart';
 import 'package:nft2_trader_front_end/util/design_kit.dart';
@@ -26,11 +26,14 @@ class _LoginViewState extends State<LoginView> {
 
   @override
   Widget build(BuildContext context) {
+    var appState = context.watch<AppState>();
+
     return Scaffold(
       backgroundColor: DesignKit.featherGreen,
       body: Container(
-        padding:
-            EdgeInsets.symmetric(horizontal: DesignKit.getWidth(context, 25)),
+        padding: EdgeInsets.symmetric(
+          horizontal: DesignKit.getWidth(context, 25),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -84,13 +87,16 @@ class _LoginViewState extends State<LoginView> {
                     ).then((keyPair) => setState(() {
                           _addrController.text = keyPair!.walletAddress;
                           _privateController.text = keyPair.privateKey;
+
+                          addr = keyPair.walletAddress;
+                          private = keyPair.privateKey;
                         }));
                   },
                   text: '지갑 생성',
                 ),
                 SwingElevatedButton(
                   onPressed: () {
-                    if (LoginLogic.loginAuth(addr, private)) {
+                    if (LoginIntents.loginAuth(addr, private)) {
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => Lobby(),
                       ));

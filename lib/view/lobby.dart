@@ -126,7 +126,7 @@ class GcCard extends StatelessWidget {
                       Row(
                         children: [
                           SvgPicture.asset(
-                            'assets/icons/direction_up.svg',
+                            'assets/icons/price_direction/direction_up.svg',
                             height: DesignKit.getHeight(context, 14),
                           ),
                           SizedBox(
@@ -152,7 +152,7 @@ class GcCard extends StatelessWidget {
                       Row(
                         children: [
                           SvgPicture.asset(
-                            'assets/icons/direction_down.svg',
+                            'assets/icons/price_direction/direction_down.svg',
                             height: DesignKit.getHeight(context, 14),
                           ),
                           SizedBox(
