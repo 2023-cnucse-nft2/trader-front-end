@@ -45,6 +45,7 @@ class ProfileView extends StatelessWidget {
       body: ListView(
         children: [
           SectionBox(
+            label: '프로필',
             child: Column(
               children: [
                 Stack(
@@ -119,6 +120,7 @@ class ProfileView extends StatelessWidget {
             ),
           ),
           SectionBox(
+            label: '회원권',
             child: SizedBox(
               width: DesignKit.getWidth(context, 340),
               child: Column(

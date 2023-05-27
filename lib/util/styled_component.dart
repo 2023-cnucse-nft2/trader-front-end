@@ -228,9 +228,10 @@ class SwingElevatedButton extends StatelessWidget {
 }
 
 class SectionBox extends StatelessWidget {
-  Widget child;
+  final String label;
+  final Widget child;
 
-  SectionBox({super.key, required this.child});
+  const SectionBox({super.key, required this.label, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -241,8 +242,8 @@ class SectionBox extends StatelessWidget {
       ),
       child: Column(
         children: [
-          BoldText18('프로필'),
-          Bulkhead(),
+          BoldText18(label),
+          const Bulkhead(),
           child,
         ],
       ),
