@@ -1,6 +1,5 @@
 class Util {
   static String balanceToString(String amount) {
-    String result = '';
     while (amount.length <= 18) {
       amount = '0$amount';
     }
@@ -11,6 +10,16 @@ class Util {
       tmp.removeLast();
     }
     tmp.add('-');
+    return tmp.join();
+  }
+
+  static String toLocaleString(String price) {
+    List<String> tmp = price.split('');
+
+    for (int i = tmp.length - 3; i > 0; i -= 3) {
+      tmp.insert(i, ',');
+    }
+
     return tmp.join();
   }
 }

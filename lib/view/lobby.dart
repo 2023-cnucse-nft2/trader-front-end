@@ -4,6 +4,7 @@ import 'package:nft2_trader_front_end/model/app_state.dart';
 import 'package:nft2_trader_front_end/model/golf_field.dart';
 import 'package:nft2_trader_front_end/util/design_kit.dart';
 import 'package:nft2_trader_front_end/util/styled_component.dart';
+import 'package:nft2_trader_front_end/util/util.dart';
 import 'package:nft2_trader_front_end/view/order_book.dart';
 import 'package:nft2_trader_front_end/view/profile_view.dart';
 import 'package:provider/provider.dart';
@@ -117,7 +118,9 @@ class GcCard extends StatelessWidget {
                       0
                   ? [
                       BoldText18(
-                        gc.tradeHistory[gc.tradeHistory.length - 1].toString(),
+                        Util.toLocaleString(gc
+                            .tradeHistory[gc.tradeHistory.length - 1]
+                            .toString()),
                         textColor: DesignKit.red,
                       ),
                       SizedBox(
@@ -143,7 +146,9 @@ class GcCard extends StatelessWidget {
                     ]
                   : [
                       BoldText18(
-                        gc.tradeHistory[gc.tradeHistory.length - 1].toString(),
+                        Util.toLocaleString(gc
+                            .tradeHistory[gc.tradeHistory.length - 1]
+                            .toString()),
                         textColor: DesignKit.blue,
                       ),
                       SizedBox(

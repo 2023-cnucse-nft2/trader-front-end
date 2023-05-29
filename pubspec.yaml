@@ -37,6 +37,7 @@ dependencies:
   provider: ^6.0.5
   flutter_svg: ^2.0.2
   dotted_decoration: ^2.0.0
+  syncfusion_flutter_charts: ^21.2.6
 
 dev_dependencies:
   flutter_test:
