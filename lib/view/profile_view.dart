@@ -113,6 +113,7 @@ class ProfileView extends StatelessWidget {
                         )
                       ],
                     ),
+                    // TODO: ETH -> KRW 환율 계산하여 보여주기
                     PlainText14('KRW ${appState.user.balance.toString()}'),
                   ],
                 ),
@@ -145,6 +146,7 @@ class MembershipTicket extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        // TODO: 회원권 상세 스펙 볼 수 있게 하기
         print('dfsdf');
       },
       child: Stack(

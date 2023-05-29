@@ -15,37 +15,17 @@ class AppState extends ChangeNotifier {
     balance: "200000000000000000000",
     memberships: [
       Membership(
-        field: GolfField(
-          name: '유성CC',
-          tradeHistory: [3000, 3500],
-          fee: 55,
-          spec: "우리 골프장 킹왕짱 좋아요 많이 놀러오세요 @@@@@@@@@@",
-        ),
+        field: yuseongCC,
         purchasePrice: 3400,
       ),
       Membership(
-        field: GolfField(
-          name: '한화리조트',
-          tradeHistory: [14300, 13700],
-          fee: 22,
-          spec: "????",
-        ),
+        field: hanhwaResort,
         purchasePrice: 12800,
       ),
     ],
   );
   final List<GolfField> golfFieldList = [
-    GolfField(
-      name: '유성CC',
-      tradeHistory: [3000, 3500],
-      fee: 55,
-      spec: "우리 골프장 킹왕짱 좋아요 많이 놀러오세요 @@@@@@@@@@",
-    ),
-    GolfField(
-      name: '한화리조트',
-      tradeHistory: [14300, 13700],
-      fee: 22,
-      spec: "????",
-    ),
+    yuseongCC,
+    hanhwaResort,
   ];
 }
