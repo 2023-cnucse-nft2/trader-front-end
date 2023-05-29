@@ -14,15 +14,18 @@ class AppState extends ChangeNotifier {
     publicAddress: "0xabc939cd9ef01",
     balance: "200000000000000000000",
     memberships: [
-      MemberShip(fieldName: "유성CC", price: "3500"),
+      Membership(
+        field: yuseongCC,
+        purchasePrice: 3400,
+      ),
+      Membership(
+        field: hanhwaResort,
+        purchasePrice: 12800,
+      ),
     ],
   );
   final List<GolfField> golfFieldList = [
-    GolfField(
-      name: '유성CC',
-      priceList: ["3000", "3500"],
-      spec: "우리 골프장 킹왕짱 좋아요 많이 놀러오세요 @@@@@@@@@@",
-    ),
-    GolfField(name: '한화리조트', priceList: ["14300", "13700"]),
+    yuseongCC,
+    hanhwaResort,
   ];
 }
